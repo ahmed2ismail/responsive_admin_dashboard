@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_admin_dashboard/core/widgets/custom_drawer_item.dart';
+import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/custom_drawer_item.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/data/models/drawer_item_model.dart';
 
 class CustomDrawerListView extends StatefulWidget {

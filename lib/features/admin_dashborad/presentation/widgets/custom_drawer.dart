@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_assets.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
-import 'package:responsive_admin_dashboard/core/widgets/active_and_inactive_drawer_item.dart';
-import 'package:responsive_admin_dashboard/core/widgets/custom_drawer_list_view.dart';
-import 'package:responsive_admin_dashboard/core/widgets/user_info_list_tile.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/data/models/drawer_item_model.dart';
+import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/active_and_inactive_drawer_item.dart';
+import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/user_info_list_tile.dart';
+import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/custom_drawer_list_view.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -64,7 +64,7 @@ class CustomDrawer extends StatelessWidget {
             hasScrollBody: false,
             child: Column(
               children: [
-                Spacer(),
+                Expanded(child: SizedBox(height: 20.h)),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                     title: 'Settings',

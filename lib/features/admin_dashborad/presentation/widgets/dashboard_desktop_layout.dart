@@ -10,7 +10,11 @@ class DashboardDesktopLayout extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Expanded(child: CustomDrawer()),
-        Expanded(child: Container()),
+        Expanded(child: Column(
+          children: [
+            
+          ],
+        )),
       ],
     );
   }
