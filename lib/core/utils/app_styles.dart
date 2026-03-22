@@ -1,6 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'app_colors.dart'; // تأكد من استدعاء كلاس الألوان اللي عملناه
+import 'app_colors.dart';
+
+/*
+الفرق بين استخدام google_fonts package و تنزيل الخط بشكل يدوي في مجلد ال assets:
+1. استخدام ملفات الخطوط محلياً:
+بعد تحميل ملفات الـ .ttf ووضعتها في مجلد assets/fonts:
+المميزات:
+يعمل بدون إنترنت: الخط يظهر فوراً حتى لو كان المستخدم غير متصل بالشبكة عند أول تشغيل للتطبيق.
+أداء أسرع قليلاً: لا يحتاج التطبيق لإجراء طلب HTTP لتحميل الخط من سيرفرات جوجل.
+العيوب:
+زيادة حجم التطبيق: كل ملف خط تضيفه يزيد من مساحة الـ APK أو الـ IPA النهائي.
+إعداد يدوي: يجب عليك تعريف الخطوط يدوياً في ملف pubspec.yaml تحت قسم fonts ليتعرف عليها فلاتر.
+2. استخدام باكدج google_fonts
+المميزات:
+سهولة تامة: لا تحتاج لتحميل ملفات أو تعديل الـ pubspec.yaml لكل خط؛ فقط اكتب GoogleFonts.montserrat().
+حجم أصغر: التطبيق يحمل فقط الأوزان التي تستخدمها فعلياً من الإنترنت عند الحاجة.
+العيوب:
+يتطلب إنترنت: في أول مرة يفتح فيها المستخدم التطبيق، قد يظهر الخط الافتراضي للحظات حتى يكتمل تحميل خط جوجل (إلا إذا قمت بعمل "Bundling" للخطوط معها).
+في حال الستخدام الخط اللذي تم تنزيله:
+static const TextStyle styleSemiBold20 = TextStyle(
+  color: AppColors.darkBlue,
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
+  fontFamily: 'Montserrat', // يجب أن يطابق الاسم المعرف في pubspec.yaml
+);
+*/
 
 abstract class AppStyles {
   // 1. ستايل العناوين الكبيرة (مثل All Expenses, Quick Invoice)

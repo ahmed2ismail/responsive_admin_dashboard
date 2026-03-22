@@ -14,6 +14,7 @@ abstract class AppAssets {
 
   // أيقونات البطاقة والماليات (Cards & Finances)
   static const String myCard = '${_basePath}my_card.svg'; // أيقونة البطاقة البنكية
+  static const String balance = '${_basePath}balance.svg'; // أيقونة ال balance(All Expenses)
   static const String income = '${_basePath}income.svg';   // سهم الدخل
   static const String expenses = '${_basePath}expenses.svg'; // سهم المصروفات
 
@@ -22,5 +23,7 @@ abstract class AppAssets {
   static const String arrowDown = '${_basePath}arrow_down.svg';
   
   // صورة المستخدم (Avatar) - غالباً تكون PNG
-  static const String avatar = '${_basePath}avatar.png';
+  static const String avatar1 = '${_basePath}avatar_1.svg';
+  static const String avatar2 = '${_basePath}avatar_2.svg';
+  static const String avatar3 = '${_basePath}avatar_3.svg';
 }

@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:responsive_admin_dashboard/core/utils/app_assets.dart';
+import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
+import 'package:responsive_admin_dashboard/core/widgets/active_and_inactive_drawer_item.dart';
+import 'package:responsive_admin_dashboard/core/widgets/custom_drawer_list_view.dart';
+import 'package:responsive_admin_dashboard/core/widgets/user_info_list_tile.dart';
+import 'package:responsive_admin_dashboard/features/admin_dashborad/data/models/drawer_item_model.dart';
+
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
+
+  static const List<DrawerItemModel> drawerItems = [
+    DrawerItemModel(title: 'Dashboard', iconImage: AppAssets.dashboard),
+    DrawerItemModel(
+      title: 'My Transactions',
+      iconImage: AppAssets.myTransactions,
+    ),
+    DrawerItemModel(title: 'Statistics', iconImage: AppAssets.statistics),
+    DrawerItemModel(
+      title: 'Wallet Account',
+      iconImage: AppAssets.walletAccount,
+    ),
+    DrawerItemModel(
+      title: 'My Investments',
+      iconImage: AppAssets.myInvestments,
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: 28.r, right: 20.r),
+      color: AppColors.pureWhite,
+      child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.only(
+                left: 40.r,
+                right: 47.r,
+                top: 50.r,
+                bottom: 17.r,
+              ),
+              height: 53.h,
+              width: 193.w,
+              color: AppColors.grey,
+              child: SvgPicture.asset(AppAssets.gallery),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              image: AppAssets.avatar3,
+              title: 'Lekan Okeowo',
+              subTitle: 'demo@gmail.com',
+            ),
+          ),
+          SliverToBoxAdapter(child: SizedBox(height: 28.h)),
+          CustomDrawerListView(drawerItems: drawerItems),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Spacer(),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Settings',
+                    iconImage: AppAssets.settings,
+                  ),
+                ),
+                SizedBox(height: 20.h),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Logout',
+                    iconImage: AppAssets.logout,
+                  ),
+                ),
+                SizedBox(height: 48.h),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

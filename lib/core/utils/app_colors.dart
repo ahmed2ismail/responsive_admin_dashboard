@@ -14,6 +14,7 @@ abstract class AppColors {
   // درجات الأبيض والرمادي (Backgrounds & Borders)
   static const Color pureWhite = Color(0xFFFFFFFF);
   static const Color backgroundWhite = Color(0xFFFAFAFA); // خلفية التطبيق الهادئة
+  static const Color grey = Color(0xFFC4C4C4);
   static const Color lightGrey = Color(0xFFF1F1F1);      // خلفية خفيفة جداً
   static const Color borderGrey = Color(0xFFE8E8E8);     // للحدود (Borders)
   static const Color textGrey = Color(0xFFAAAAAA);       // للنصوص الثانوية
