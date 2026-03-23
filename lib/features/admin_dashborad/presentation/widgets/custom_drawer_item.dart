@@ -13,8 +13,13 @@ class CustomDrawerItem extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
-    return isActive
-        ? ActiveDrawerItem(drawerItemModel: drawerItemModel)
-        : InActiveDrawerItem(drawerItemModel: drawerItemModel);
+    return AnimatedCrossFade(
+      firstChild: InActiveDrawerItem(drawerItemModel: drawerItemModel),
+      secondChild: ActiveDrawerItem(drawerItemModel: drawerItemModel),
+      crossFadeState: isActive
+          ? CrossFadeState.showSecond
+          : CrossFadeState.showFirst,
+      duration: const Duration(milliseconds: 300),
+    );
   }
 }

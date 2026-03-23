@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_assets.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/data/models/drawer_item_model.dart';
+import 'package:responsive_admin_dashboard/features/admin_dashborad/data/models/user_info_model.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/active_and_inactive_drawer_item.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/user_info_list_tile.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/custom_drawer_list_view.dart';
@@ -53,32 +54,34 @@ class CustomDrawer extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: UserInfoListTile(
-              image: AppAssets.avatar3,
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
+              userInfoModel: UserInfoModel(
+                image: AppAssets.avatar3,
+                title: 'Lekan Okeowo',
+                subTitle: 'demo@gmail.com',
+              ),
             ),
           ),
-          SliverToBoxAdapter(child: SizedBox(height: 28.h)),
+          SliverToBoxAdapter(child: SizedBox(height: 28)),
           CustomDrawerListView(drawerItems: drawerItems),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox(height: 20.h)),
+                Expanded(child: SizedBox(height: 20)),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                     title: 'Settings',
                     iconImage: AppAssets.settings,
                   ),
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 20),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                     title: 'Logout',
                     iconImage: AppAssets.logout,
                   ),
                 ),
-                SizedBox(height: 48.h),
+                SizedBox(height: 48),
               ],
             ),
           ),

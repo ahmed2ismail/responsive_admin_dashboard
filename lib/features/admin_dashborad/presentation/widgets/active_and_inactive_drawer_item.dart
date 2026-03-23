@@ -29,7 +29,7 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.iconImage),
       title: Text(drawerItemModel.title, style: AppStyles.styleBold16),
-      trailing: Container(width: 3.27.w, color: AppColors.primaryBlue),
+      trailing: Container(width: 1.27.w, color: AppColors.primaryBlue),
     );
   }
 }

@@ -4,7 +4,7 @@ import 'package:responsive_admin_dashboard/core/utils/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   final String title; // عنوان الحقل (مثال: Customer Name)
-  final String hint;  // النص المساعد داخل الحقل
+  final String hint; // النص المساعد داخل الحقل
 
   const CustomTextField({super.key, required this.title, required this.hint});
 
@@ -21,27 +21,29 @@ class CustomTextField extends StatelessWidget {
         const SizedBox(height: 12), // مسافة بين العنوان والحقل
         TextField(
           decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: 16,
+            ),
             hintText: hint,
             hintStyle: AppStyles.styleRegular16.copyWith(
-              color: const Color(0xFFAAAAAA),
+              color: AppColors.textGrey,
             ),
-            fillColor: const Color(0xFFFAFAFA),
+            fillColor: AppColors.fillGrey,
             filled: true,
-            border: buildBorder(),
-            enabledBorder: buildBorder(),
-            focusedBorder: buildBorder(AppColors.primaryBlue),
+            border: _buildBorder(),
+            enabledBorder: _buildBorder(),
+            focusedBorder: _buildBorder(AppColors.primaryBlue),
           ),
         ),
       ],
     );
   }
 
-  OutlineInputBorder buildBorder([Color? color]) {
+  OutlineInputBorder _buildBorder([Color? color]) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide(
-        color: color ?? const Color(0xFFFAFAFA),
-      ),
+      borderSide: BorderSide(color: color ?? AppColors.fillGrey),
     );
   }
 }
