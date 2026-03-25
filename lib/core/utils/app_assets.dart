@@ -13,7 +13,8 @@ abstract class AppAssets {
   static const String logout = '${_basePath}logout.svg';
 
   // أيقونات البطاقة والماليات (Cards & Finances)
-  static const String myCard = '${_basePath}my_card.svg'; // أيقونة البطاقة البنكية
+  static const String myCardsvg = '${_basePath}card_background.svg'; // أيقونة البطاقة البنكية
+  static const String myCardpng = '${_basePath}card_background.png'; // أيقونة البطاقة البنكية
   static const String balance = '${_basePath}balance.svg'; // أيقونة ال balance(All Expenses)
   static const String income = '${_basePath}income.svg';   // سهم الدخل
   static const String expenses = '${_basePath}expenses.svg'; // سهم المصروفات
