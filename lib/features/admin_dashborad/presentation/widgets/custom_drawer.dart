@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_assets.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
@@ -32,7 +31,8 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 28.r, right: 20.r),
+      width: MediaQuery.sizeOf(context).width * 0.6,
+      padding: EdgeInsets.only(left: 28, right: 20),
       color: AppColors.pureWhite,
       child: CustomScrollView(
         physics: const BouncingScrollPhysics(),
@@ -40,14 +40,9 @@ class CustomDrawer extends StatelessWidget {
           SliverToBoxAdapter(
             child: Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(
-                left: 40.r,
-                right: 47.r,
-                top: 50.r,
-                bottom: 17.r,
-              ),
-              height: 53.h,
-              width: 193.w,
+              margin: EdgeInsets.only(left: 40, right: 47, top: 50, bottom: 17),
+              height: 53,
+              width: 193,
               color: AppColors.grey,
               child: SvgPicture.asset(AppAssets.gallery),
             ),

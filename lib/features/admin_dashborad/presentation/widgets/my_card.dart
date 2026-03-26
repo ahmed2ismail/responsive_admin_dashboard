@@ -5,9 +5,7 @@ import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_styles.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({
-    super.key,
-  });
+  const MyCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +64,8 @@ class MyCard extends StatelessWidget {
                 ),
               ),
             ),
-            // إضافة مسافة سفلية مرنة لا تتسبب في Overflow إذا صغرت الشاشة جداً
-            const Flexible(child: SizedBox(height: 27)),
+            // مسافة ثابتة في الأسفل لدفع المحتوى للأعلى قليلاً عن الحافة
+            const SizedBox(height: 27),
           ],
         ),
       ),

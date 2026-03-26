@@ -1,6 +1,5 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
 import '/../features/admin_dashborad/presentation/views/dashboard_view.dart';
@@ -20,27 +19,18 @@ class ResponsiveAdminDashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(390, 844),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'ResponsiveAdminDashBoard',
-          locale: DevicePreview.locale(context),
-          builder: DevicePreview.appBuilder,
-          theme: ThemeData(
-            textTheme: GoogleFonts.montserratAlternatesTextTheme(),
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: AppColors.backgroundWhite,
-            ),
-            useMaterial3: true,
-            scaffoldBackgroundColor: AppColors.backgroundWhite,
-          ),
-          home: const DashboardView(),
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'ResponsiveAdminDashBoard',
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      theme: ThemeData(
+        textTheme: GoogleFonts.montserratAlternatesTextTheme(),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.backgroundWhite),
+        useMaterial3: true,
+        scaffoldBackgroundColor: AppColors.backgroundWhite,
+      ),
+      home: const DashboardView(),
     );
   }
 }

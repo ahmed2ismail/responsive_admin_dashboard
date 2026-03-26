@@ -13,7 +13,6 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
-          const SizedBox(height: 40),
           AllExpenses(),
           const SizedBox(height: 24),
           QuickInvoice(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_assets.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
@@ -46,8 +45,8 @@ class CustomDropDownField extends StatelessWidget {
                   const SizedBox(width: 12),
                   SvgPicture.asset(
                     AppAssets.arrowDown,
-                    height: 24.r,
-                    width: 24.r,
+                    height: 24,
+                    width: 24,
                   ),
                 ],
               );
@@ -65,7 +64,7 @@ class CustomDropDownField extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12), // يمكنك تعديل المسافة هنا
-              SvgPicture.asset(AppAssets.arrowDown, height: 24.r, width: 24.r),
+              SvgPicture.asset(AppAssets.arrowDown, height: 24, width: 24),
             ],
           ),
         ),

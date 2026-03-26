@@ -70,6 +70,13 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
   );
 
+  // ستايل العناوين المتوسطة (مثل اسم المستخدم في البطاقة)
+  static final TextStyle styleMedium20 = GoogleFonts.montserrat(
+    color: AppColors.darkBlue,
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
+  );
+
   // 6. ستايل المدخلات (Text Fields Hint)
   static final TextStyle styleRegular12 = GoogleFonts.montserrat(
     color: AppColors.textGrey,
@@ -96,7 +103,7 @@ abstract class AppStyles {
     borderRadius: BorderRadius.circular(12),
     boxShadow: [
       BoxShadow(
-        color: const Color(0xFF000000).withValues(alpha: 0.04),
+        color: AppColors.blackShadow4Opacity,
         blurRadius: 40,
         offset: const Offset(0, 4),
       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_styles.dart';
 
 class CustomBackgroundContainer extends StatelessWidget {
@@ -17,7 +16,7 @@ class CustomBackgroundContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: margin ?? EdgeInsets.zero,
-      padding: padding ?? EdgeInsets.all(20.r),
+      padding: padding ?? const EdgeInsets.all(20),
       decoration: AppStyles.whiteCardDecorationShadow,
       child: child,
     );

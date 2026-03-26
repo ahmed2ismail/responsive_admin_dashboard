@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/custom_button.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/custom_drop_down_field.dart';
@@ -20,7 +19,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 hint: 'Type customer name',
               ),
             ),
-            SizedBox(width: 16.w),
+            SizedBox(width: 16),
             Expanded(
               child: CustomTextField(
                 title: 'Customer Email',
@@ -29,7 +28,7 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 24.h),
+        SizedBox(height: 24),
         Row(
           children: [
             Expanded(
@@ -38,11 +37,11 @@ class QuickInvoiceForm extends StatelessWidget {
                 hint: 'Type customer name',
               ),
             ),
-            SizedBox(width: 16.w),
+            SizedBox(width: 16),
             Expanded(child: CustomDropDownField()),
           ],
         ),
-        SizedBox(height: 24.h),
+        SizedBox(height: 24),
         Row(
           children: [
             Expanded(
@@ -52,7 +51,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 backgroundColor: AppColors.pureWhite,
               ),
             ),
-            SizedBox(width: 24.w),
+            SizedBox(width: 24),
             Expanded(child: CustomButton(text: 'Send Money')),
           ],
         ),

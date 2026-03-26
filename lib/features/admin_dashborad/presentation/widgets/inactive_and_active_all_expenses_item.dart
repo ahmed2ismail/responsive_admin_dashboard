@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_styles.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/data/models/all_expenses_item_model.dart';
@@ -16,11 +15,11 @@ class InActiveAllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.r, vertical: 16.r),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         color: AppColors.pureWhite,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           side: BorderSide(color: AppColors.borderGrey),
         ),
       ),
@@ -48,11 +47,11 @@ class ActiveAllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.r, vertical: 16.r),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         color: AppColors.primaryBlue,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
         ),
       ),
       child: Column(

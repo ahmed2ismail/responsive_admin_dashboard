@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_assets.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
@@ -34,8 +33,8 @@ class AllExpensesItemHeader extends StatelessWidget {
           angle: -1.57,
           child: SvgPicture.asset(
             AppAssets.arrowDown,
-            height: 24.r,
-            width: 24.r,
+            height: 24,
+            width: 24,
             colorFilter: ColorFilter.mode(
               imageColor == null ? AppColors.darkBlue : AppColors.pureWhite,
               BlendMode.srcIn,
