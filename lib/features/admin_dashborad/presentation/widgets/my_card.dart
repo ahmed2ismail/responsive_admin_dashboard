@@ -10,8 +10,10 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 420 / 215,
+      aspectRatio: 420 / 255,
       child: Container(
+        width: double.infinity,
+        height: MediaQuery.sizeOf(context).height * 0.21,
         decoration: ShapeDecoration(
           color: AppColors.primaryBlue,
           image: DecorationImage(
@@ -27,14 +29,13 @@ class MyCard extends StatelessWidget {
           children: [
             ListTile(
               title: Text('Name card'),
-              titleTextStyle: AppStyles.styleRegular16.copyWith(
-                color: AppColors.pureWhite,
-              ),
+              titleTextStyle: AppStyles.styleRegular16(
+                context,
+              ).copyWith(color: AppColors.pureWhite),
               subtitle: Text('Syah Bandi'),
-              subtitleTextStyle: AppStyles.styleMedium16.copyWith(
-                color: AppColors.pureWhite,
-                fontSize: 20,
-              ),
+              subtitleTextStyle: AppStyles.styleMedium16(
+                context,
+              ).copyWith(color: AppColors.pureWhite, fontSize: 20),
               trailing: SvgPicture.asset(AppAssets.gallery),
             ),
             const Expanded(child: SizedBox()),
@@ -45,9 +46,9 @@ class MyCard extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Text(
                   '0918 8124 0042 8129',
-                  style: AppStyles.styleSemiBold24.copyWith(
-                    color: AppColors.pureWhite,
-                  ),
+                  style: AppStyles.styleSemiBold24(
+                    context,
+                  ).copyWith(color: AppColors.pureWhite),
                 ),
               ),
             ),
@@ -58,9 +59,9 @@ class MyCard extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Text(
                   '12/20 - 124',
-                  style: AppStyles.styleRegular16.copyWith(
-                    color: AppColors.pureWhite,
-                  ),
+                  style: AppStyles.styleRegular16(
+                    context,
+                  ).copyWith(color: AppColors.pureWhite),
                 ),
               ),
             ),

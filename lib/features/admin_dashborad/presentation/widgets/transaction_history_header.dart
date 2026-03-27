@@ -13,11 +13,20 @@ class TransactionHistoryHeader extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Transaction History', style: AppStyles.styleSemiBold20),
-            Text(
-              'See all',
-              style: AppStyles.styleMedium16.copyWith(
-                color: AppColors.primaryBlue,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                'Transaction History',
+                style: AppStyles.styleSemiBold20(context),
+              ),
+            ),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                'See all',
+                style: AppStyles.styleMedium16(context).copyWith(
+                  color: AppColors.primaryBlue,
+                ),
               ),
             ),
           ],
@@ -25,7 +34,7 @@ class TransactionHistoryHeader extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           '13 April 2022',
-          style: AppStyles.styleMedium16.copyWith(color: AppColors.textGrey),
+          style: AppStyles.styleMedium16(context).copyWith(color: AppColors.textGrey),
         ),
       ],
     );

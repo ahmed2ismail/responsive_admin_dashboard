@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_styles.dart';
+import 'package:responsive_admin_dashboard/core/utils/size_config.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/adabtive_layout.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/custom_drawer.dart';
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/dashboard_desktop_layout.dart';
@@ -18,10 +19,13 @@ class _DashboardViewState extends State<DashboardView> {
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
-      drawer: MediaQuery.sizeOf(context).width < 800 ? CustomDrawer() : null,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      drawer: SizeConfig.screenWidth < SizeConfig.tabletBreakpoint
+          ? CustomDrawer()
+          : null,
+      appBar: SizeConfig.screenWidth < SizeConfig.tabletBreakpoint
           ? AppBar(
               elevation: 0,
               backgroundColor: Colors.transparent,
@@ -33,7 +37,7 @@ class _DashboardViewState extends State<DashboardView> {
               ),
               title: Text(
                 'Dashboard',
-                style: AppStyles.styleSemiBold20.copyWith(
+                style: AppStyles.styleSemiBold20(context).copyWith(
                   color: AppColors.secondaryBlue,
                 ),
               ),

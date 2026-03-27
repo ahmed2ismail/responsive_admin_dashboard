@@ -3,22 +3,17 @@ import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation
 import 'package:responsive_admin_dashboard/features/admin_dashborad/presentation/widgets/quick_invoice.dart';
 
 class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
-  const AllExpensesAndQuickInvoiceSection({
-    super.key,
-  });
+  const AllExpensesAndQuickInvoiceSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      child: Column(
-        children: [
-          AllExpenses(),
-          const SizedBox(height: 24),
-          QuickInvoice(),
-          const SizedBox(height: 32),
-        ],
-      ),
+    return Column(
+      children: [
+        AllExpenses(),
+        const SizedBox(height: 24),
+        QuickInvoice(),
+        const SizedBox(height: 32),
+      ],
     );
   }
 }

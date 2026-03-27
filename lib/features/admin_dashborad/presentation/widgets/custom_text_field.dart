@@ -16,7 +16,7 @@ class CustomTextField extends StatelessWidget {
         // العنوان فوق الـ TextField
         Text(
           title,
-          style: AppStyles.styleMedium16, // نستخدم ستايل متوسط الحجم
+          style: AppStyles.styleMedium16(context), // نستخدم ستايل متوسط الحجم
         ),
         const SizedBox(height: 12), // مسافة بين العنوان والحقل
         TextField(
@@ -26,7 +26,7 @@ class CustomTextField extends StatelessWidget {
               horizontal: 16,
             ),
             hintText: hint,
-            hintStyle: AppStyles.styleRegular16.copyWith(
+            hintStyle: AppStyles.styleRegular16(context).copyWith(
               color: AppColors.textGrey,
             ),
             fillColor: AppColors.fillGrey,

@@ -13,7 +13,7 @@ class AllExpensesHeader extends StatelessWidget {
         Flexible(
           child: Text(
             'All Expenses',
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
             overflow: TextOverflow.ellipsis,
           ),
         ),

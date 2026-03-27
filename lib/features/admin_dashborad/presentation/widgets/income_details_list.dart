@@ -10,22 +10,26 @@ class IncomeDetailsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: incomeDetails
           .map(
-            (item) => ListTile(
-              leading: Container(
-                width: 12,
-                height: 12,
-                decoration: BoxDecoration(
-                  color: item.color,
-                  shape: BoxShape.circle,
+            (item) => Expanded(
+              child: ListTile(
+                leading: Container(
+                  width: 12,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    color: item.color,
+                    shape: BoxShape.circle,
+                  ),
                 ),
-              ),
-              title: Text(item.title, style: AppStyles.styleRegular16),
-              trailing: Text(
-                item.value,
-                style: AppStyles.styleMedium16.copyWith(
-                  color: AppColors.primaryBlue,
+                title: Text(item.title, style: AppStyles.styleRegular16(context)),
+                trailing: Text(
+                  item.value,
+                  style: AppStyles.styleMedium16(context).copyWith(
+                    color: AppColors.primaryBlue,
+                  ),
                 ),
               ),
             ),

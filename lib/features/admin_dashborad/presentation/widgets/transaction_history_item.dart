@@ -23,7 +23,7 @@ class TransactionHistoryItem extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(
             transactionHistoryItemModel.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
         ),
         subtitle: FittedBox(
@@ -31,12 +31,12 @@ class TransactionHistoryItem extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(
             transactionHistoryItemModel.date,
-            style: AppStyles.styleRegular14.copyWith(color: AppColors.textGrey),
+            style: AppStyles.styleRegular14(context).copyWith(color: AppColors.textGrey),
           ),
         ),
         trailing: Text(
           transactionHistoryItemModel.amount,
-          style: AppStyles.styleSemiBold20.copyWith(
+          style: AppStyles.styleSemiBold20(context).copyWith(
             color: transactionHistoryItemModel.type == TransactionType.withdrawal
                 ? AppColors.coralOrange // لو سحب
                 : AppColors.successGreen, // لو إيداع (أي شيء آخر),

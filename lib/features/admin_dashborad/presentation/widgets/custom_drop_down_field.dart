@@ -17,7 +17,7 @@ class CustomDropDownField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Item mount', style: AppStyles.styleMedium16),
+        Text('Item mount', style: AppStyles.styleMedium16(context)),
         const SizedBox(height: 12),
         DropdownButtonFormField<String>(
           icon: const SizedBox.shrink(), // إخفاء الأيقونة الافتراضية الموجودة على اليمين
@@ -41,7 +41,7 @@ class CustomDropDownField extends StatelessWidget {
               return Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(e, style: AppStyles.styleRegular16),
+                  Text(e, style: AppStyles.styleRegular16(context)),
                   const SizedBox(width: 12),
                   SvgPicture.asset(
                     AppAssets.arrowDown,
@@ -59,7 +59,7 @@ class CustomDropDownField extends StatelessWidget {
             children: [
               Text(
                 'USD',
-                style: AppStyles.styleRegular16.copyWith(
+                style: AppStyles.styleRegular16(context).copyWith(
                   color: AppColors.textGrey,
                 ),
               ),
