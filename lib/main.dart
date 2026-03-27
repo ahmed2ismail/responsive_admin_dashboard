@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_admin_dashboard/core/utils/app_colors.dart';
@@ -7,8 +8,7 @@ import '/../features/admin_dashborad/presentation/views/dashboard_view.dart';
 void main() {
   runApp(
     DevicePreview(
-      // enabled: !kReleaseMode,
-      enabled: false,
+      enabled: !kReleaseMode,
       builder: (context) => const ResponsiveAdminDashBoard(),
     ),
   );

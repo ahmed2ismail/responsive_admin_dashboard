@@ -24,11 +24,20 @@ class IncomeDetailsList extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                 ),
-                title: Text(item.title, style: AppStyles.styleRegular16(context)),
-                trailing: Text(
-                  item.value,
-                  style: AppStyles.styleMedium16(context).copyWith(
-                    color: AppColors.primaryBlue,
+                title: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    item.title,
+                    style: AppStyles.styleRegular16(context),
+                  ),
+                ),
+                trailing: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    item.value,
+                    style: AppStyles.styleMedium16(
+                      context,
+                    ).copyWith(color: AppColors.primaryBlue),
                   ),
                 ),
               ),

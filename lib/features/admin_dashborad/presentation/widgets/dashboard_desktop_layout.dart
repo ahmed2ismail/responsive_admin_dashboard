@@ -49,7 +49,7 @@ class DashboardDesktopLayout extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: 32),
+        // const SizedBox(width: 32),
       ],
     );
   }
