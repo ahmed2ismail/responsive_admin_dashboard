@@ -18,14 +18,19 @@ class AllExpensesItemHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CircleAvatar(
-          backgroundColor: imageBackgroundColor ?? AppColors.fillGrey,
-          radius: 32,
-          child: SvgPicture.asset(
-            assetName,
-            colorFilter: ColorFilter.mode(
-              imageColor ?? AppColors.primaryBlue,
-              BlendMode.srcIn,
+        Flexible(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: 64),
+            child: CircleAvatar(
+              backgroundColor: imageBackgroundColor ?? AppColors.fillGrey,
+              radius: 32,
+              child: SvgPicture.asset(
+                assetName,
+                colorFilter: ColorFilter.mode(
+                  imageColor ?? AppColors.primaryBlue,
+                  BlendMode.srcIn,
+                ),
+              ),
             ),
           ),
         ),

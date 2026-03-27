@@ -37,26 +37,71 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // allExpensesItems.map((item) => Expanded(child: AllExpensesItem(allExpensesItemModel: item)),).toList
-      children: allExpensesItems.asMap().entries.map((entry) {
-        final int index = entry.key;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
               setState(() {
-                selectedIndex = index;
+                selectedIndex = 0;
               });
             },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesItem(
-                allExpensesItemModel: entry.value,
-                isSelected: selectedIndex == index,
-              ),
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItems[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItems[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItems[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
+    // Row(
+    //   // allExpensesItems.map((item) => Expanded(child: AllExpensesItem(allExpensesItemModel: item)),).toList
+    //   children: allExpensesItems.asMap().entries.map((entry) {
+    //     final int index = entry.key;
+    //     return Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           setState(() {
+    //             selectedIndex = index;
+    //           });
+    //         },
+    //         child: Padding(
+    //           padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+    //           child: AllExpensesItem(
+    //             allExpensesItemModel: entry.value,
+    //             isSelected: selectedIndex == index,
+    //           ),
+    //         ),
+    //       ),
+    //     );
+    //   }).toList(),
+    // );
   }
 }
